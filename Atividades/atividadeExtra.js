@@ -53,13 +53,21 @@ Saída: 1, 3, 5, 8, 9
 
 */
 
-var num = 3;
-var par_impar = num % 2;
-if (par_impar == 0) {
-  console.log("O número", num, "é par");
-} else {
-  console.log("O número", num, "é impar");
-}
+
+// var num = 3;
+// var par_impar = num % 2;
+// if (par_impar == 0) {
+//   console.log("O número", num, "é par");
+// } else {
+//   console.log("O número", num, "é impar");
+// }
+
+const parimpar = (num) => {
+  return num % 2 == 0 ? "O número é par!" : "O número é impar!";
+};
+console.log(parimpar(10));
+console.log(parimpar(3));
+console.log(parimpar(2));
 
 console.log("------------------------------------------------------------");
 var tabuada = 3;
@@ -80,10 +88,9 @@ console.log("Fatorial de 5! =", 5 * 4 * 3 * 2 * 1);
 console.log("------------------------------------------------------------");
 let numeros = [10, 20, 30, 40];
 let soma = numeros[0] + numeros[1] + numeros[2] + numeros[3];
-console.log("A soma dos numeros é igual a",soma);
+console.log("A soma dos numeros é igual a", soma);
 
 console.log("------------------------------------------------------------");
 var vetor = [8, 3, 5, 1, 9];
 console.log(vetor);
-vetor.sort();
-console.log(vetor);
+console.log(vetor.sort());
