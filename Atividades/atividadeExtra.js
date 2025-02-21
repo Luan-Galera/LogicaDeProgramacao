@@ -53,7 +53,6 @@ Saída: 1, 3, 5, 8, 9
 
 */
 
-
 // var num = 3;
 // var par_impar = num % 2;
 // if (par_impar == 0) {
@@ -94,3 +93,50 @@ console.log("------------------------------------------------------------");
 var vetor = [8, 3, 5, 1, 9];
 console.log(vetor);
 console.log(vetor.sort());
+//----------------------------------------------------------------------------
+
+/* Estourando o cartão - versão While - utilizando o navegador
+1. Crie uma variável e solicite ao usuário o seu nome; 
+2. Crie uma variável e solicite ao usuário o seu banco; 
+3. Crie uma variável e solicite ao usuário a sua agência; 
+4. Crie uma variável e solicite ao usuário o número da conta; 
+5. Crie uma variável e solicite ao usuário o saldo da conta; 
+6. Exiba ao usuário os dados e o saldo da conta; 
+7. Efetue e exiba ao usuário 5 movimentações na conta utilizando o laço While com valores aleatórios; 
+8. Exiba ao usuário novamente os dados e o saldo da conta;
+*/
+// var nome = prompt("Informe seu nome:");
+// var banco = prompt("Informe seu banco:");
+// var agencia = prompt("Informe sua agência:");
+// var conta = prompt("Informe sua conta:");
+// var saldo = prompt("Informe seu saldo:");
+// console.log(`Nome:${nome} | Banco:${banco} | Nº Agência:${agencia} | Nº Conta:${conta} | Saldo:${saldo}`);
+
+// var i = 1;
+// var saldo = 1000;
+// while (i <= 5) { //Valor aleatório entre 0 e 99.999...
+//   let gasto = Math.random() * 100;
+//   saldo -= gasto;
+//   i++;
+// }
+// console.log(`Nome:${nome} | Banco:${banco} | Nº Agência:${agencia} | Nº Conta:${conta} | Saldo:${saldo.toFixed(2)}`);
+
+// Jogo cara e coroa - melhor de três rodadas - aleatório - DO-WHILE
+// Apresentar um placar das rodadas ex:
+var i = 1;
+var vitorias = 0;
+var derrotas = 0;
+
+do {
+  let face = Math.random() * 100;
+  face < 50 ? console.log("Cara") : console.log("Coroa");
+  face < 50 ? vitorias++ : derrotas++
+  i++;
+} while (i <= 3);
+
+console.log("----------------------------");
+console.log("           PLACAR           ");
+console.log("----------------------------");
+console.log("Vitórias:", vitorias);
+console.log("Derrotas:", derrotas);
+console.log("----------------------------");
