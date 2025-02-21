@@ -60,3 +60,48 @@ for (let linha = 0; linha < matriz.length; linha++) {
 }
 
 //Laço Repetição - While / Do While
+//While testa a condição antes de entrar no laço de repetição.
+//Se a condição for inicialmente falsa, o laço não é executado nenhuma vez.
+var t = 10;
+
+while (t >= 10) {
+  console.log("Entrei no laço While...");
+  t = 0;
+}
+console.log("Terminei!");
+
+//Exemplo de While com escrita de 100 linhas
+var i = 0;
+while (i <= 100) {
+  console.log(`Escrita de linha ${i}`);
+  i++;
+}
+
+//Laço repetição While
+// While(condição){
+// fragmentos e código
+// fragmentos e código
+// fragmentos e código
+// fragmentos e código
+// contador++ | nesta parte o contador é a variável de controle de acesso
+// }
+// Exemplo que funciona somente no navegador
+// var senhaCorreta = "1234";
+// var tentativa = "";
+
+// while (tentativa !== senhaCorreta) {
+//   tentativa = prompt("Digite a senha:");
+// }
+// console.log("Acesso concedido!");
+//console.log("Telefone AQV - (14)98165-1672")
+
+//Do-While testa a condição somente no final do laço de repetição
+//Sendo assim, qualquer que seja a condição, o laço é executado pelo menos uma vez
+var x = 10;
+
+do {
+  console.log("Entrei no laço Do-While...");
+  x = 0;
+} while (x > 10);
+
+console.log("Terminei!");
