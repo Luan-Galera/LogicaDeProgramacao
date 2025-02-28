@@ -122,21 +122,44 @@ console.log(vetor.sort());
 // console.log(`Nome:${nome} | Banco:${banco} | Nº Agência:${agencia} | Nº Conta:${conta} | Saldo:${saldo.toFixed(2)}`);
 
 // Jogo cara e coroa - melhor de três rodadas - aleatório - DO-WHILE
-// Apresentar um placar das rodadas ex:
 var i = 1;
-var vitorias = 0;
-var derrotas = 0;
+var cara = 0;
+var coroa = 0;
 
 do {
   let face = Math.random() * 100;
   face < 50 ? console.log("Cara") : console.log("Coroa");
-  face < 50 ? vitorias++ : derrotas++
+  face < 50 ? cara++ : coroa++;
   i++;
 } while (i <= 3);
 
 console.log("----------------------------");
 console.log("           PLACAR           ");
 console.log("----------------------------");
-console.log("Vitórias:", vitorias);
-console.log("Derrotas:", derrotas);
+console.log(`Cara: ${cara}`);
+console.log(`Coroa: ${coroa}`);
 console.log("----------------------------");
+
+/******************************************************************************************
+                              Lista de Exercícios MASTER
+******************************************************************************************/
+/*
+  Supondo que a população de um país A seja de a habitantes com uma taxa anual de crescimento de 3% e que a população de um país B seja de b habitantes, com uma taxa anual de crescimento de 1,5%, fazer um algoritmo que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas essas taxas de crescimento
+*/
+var a = 800000;
+var b = 950000;
+var anos = 0;
+
+while (b > a) {
+  anos++;
+  a += a * 0.03;
+  b += b * 0.015;
+  console.log(`Quantos anos se passaram: ${anos}`);
+  //console.log`País A: ${a.toFixed(0)} habitantes | País B: ${b.toFixed(0)} habitantes`);
+  console.log(
+    `País A: ${Math.round(a)} habitantes | País B: ${Math.round(b)} habitantes`);
+}
+console.log(
+  `Para o país A ter uma população maior ou igual a do país B, serão necessários ${anos} anos!`
+);
+
